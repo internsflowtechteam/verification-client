@@ -1,27 +1,34 @@
 import React, { useState } from 'react'
+import styles from './styles.module.scss';
 import axios from 'axios';
 const Verfication=()=>{
-  const [verificationid, setFormData]=useState(null);
+  const [verificationid, setFormData]=useState("");
   const handleChange=(e)=>{
     setFormData({...verificationid,[e.target.name]:e.target.value});
-    
   };
     const handleSubmit=async(e)=>{
       e.preventDefault() ;
-      axios.post('http://localhost:3004/verify/verify', {
+      try{
+        axios.post('http://localhost:3004/verify/verify', {
         verification: verificationid,
       })
       .then(function (response) {
-        console.log(response);
+       
       })
+      }
+      catch(err){
+        console.log(err);
+      }
     }
   return (
     <div>
-      <form>
-        <p>Enter your certificate id :</p>
-        <input type='text' name='verificationid' onChange={handleChange}/>
-        <button onClick={handleSubmit}>Verify</button>
-      </form>
+    <div className={styles.card}>
+  <p className={styles.head}><strong>Verification</strong></p>
+  <p>Enter your verification code of the <strong>certificate/offerletter</strong></p>
+  <input type='text' name='verificationid' onChange={handleChange}/>
+  <button onClick={handleSubmit}>Verify</button>
+  <p className={styles.cardfooter}>Internsflow</p>
+</div>
     </div>
   )
 }

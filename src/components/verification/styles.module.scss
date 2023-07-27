@@ -1,0 +1,82 @@
+:root {
+    font-size: 20px;
+    box-sizing: inherit;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  p {
+    margin: 0;
+  }
+  p:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+  
+  body {
+    font: 1em/1.618 Inter, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #224;
+    background:
+      url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+      center / cover no-repeat fixed;
+  }
+  
+  .card {
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    height: 300px;
+    padding: 35px;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+     input{
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    height: 45px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: rgb(47, 47, 47);
+    font-size: .85rem;
+    font-weight: 500;
+     }
+     button{
+        background-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        border: none;
+        width: 50px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        text-align: center;
+        align-self: center;
+        color: rgb(73, 73, 73);
+        font-size: .85rem;
+        font-weight: 600;
+     }
+     button:hover{
+        background-color: rgba(255, 255, 255, .8);
+    }
+    .cardfooter {
+        font-size: 0.65em;
+        color: #446;
+        
+      }
+  }
+  
+  
+  
